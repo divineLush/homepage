@@ -1,28 +1,28 @@
-// const loadCrypto = () => {
-// 	const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,monero,litecoin,dogecoin,uniswap,chia'
-// 	console.log(url)
-// 	fetch(url)
-// 		.then(res => res.json())
-// 		.then(res => {
-// 			const wrapper = document.getElementById('crypto')
-// 			wrapper.innerHTML = ''
+const loadCrypto = () => {
+	const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,monero,litecoin,dogecoin,uniswap,chia'
+	console.log(url)
+	fetch(url)
+		.then(res => res.json())
+		.then(res => {
+			const wrapper = document.getElementById('crypto')
+			wrapper.innerHTML = ''
 
-// 			res.forEach(({ symbol, current_price, price_change_percentage_24h }) => {
-// 				const span = document.createElement('span')
+			res.forEach(({ symbol, current_price, price_change_percentage_24h }) => {
+				const span = document.createElement('span')
 
-// 				const percentClass = price_change_percentage_24h >= 0 ? 'profit' : 'loss'
-// 				const percentage = `<span class="${ percentClass }">${ Math.abs(price_change_percentage_24h) }%</span>`
+				const percentClass = price_change_percentage_24h >= 0 ? 'profit' : 'loss'
+				const percentage = `<span class="${ percentClass }">${ Math.abs(price_change_percentage_24h) }%</span>`
 
-// 				span.innerHTML = `<strong>${ symbol }</strong> ${ current_price } ${ percentage }`
-// 				span.classList.add('crypto-price')
+				span.innerHTML = `<strong>${ symbol }</strong> ${ current_price } ${ percentage }`
+				span.classList.add('crypto-price')
 
-// 				wrapper.appendChild(span)
-// 			})
-		// })
-		// .catch(err => {
-		// 	console.log(err)
-		// })
-// }
+				wrapper.appendChild(span)
+			})
+		})
+		.catch(err => {
+			console.log(err)
+		})
+}
 
 const date = () => {
 	const date = new Date();
@@ -40,7 +40,7 @@ const date = () => {
 
 const setup = () => {
 	date()
-	// loadCrypto()
+	loadCrypto()
 
 	setInterval('setup()', 60000)
 }
