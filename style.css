@@ -3,19 +3,19 @@ body {
 	padding: 1rem;
 	font-size: 1.5rem;
 	font-family: 'Hack', monospace;
-    background: #282828;
-    color: #ebdbb2;
+    background: #161821;
+    color: #d2d4de;
 }
 
 a {
 	display: inline-block;
-    color: #458588;
+    color: #84a0c6;
 	padding: 1rem 3rem 1rem 1rem;
 }
 
 a:hover,
 a:focus {
-    color: #b16286;
+    color: #a093c7;
 }
 
 p {
@@ -36,11 +36,11 @@ p {
 }
 
 .profit {
-    color: #98971a;
+    color: #b4be82;
 }
 
 .loss {
-    color: #cc241d;
+    color: #e27878;
 }
 
 #crypto {
